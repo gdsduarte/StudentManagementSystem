@@ -1,81 +1,81 @@
 Students
-25793, Emily White, emilywhite@email.com
-25789, John Doe, johndoe@email.com
+25794, Michael Green, michaelgreen@email.com
 25795, Olivia Johnson, oliviajohnson@email.com
-25796, Benjamin Williams, benjaminwilliams@email.com
 25797, Sophia Jones, sophiajones@email.com
 25790, Jane Doe, janedoe@email.com
-25791, Mary Smith, marysmith@email.com
+25793, Emily White, emilywhite@email.com
 25792, James Brown, jamesbrown@email.com
 25798, William Taylor, williamtaylor@email.com
-25794, Michael Green, michaelgreen@email.com
+25791, Mary Smith, marysmith@email.com
+25789, John Doe, johndoe@email.com
+25796, Benjamin Williams, benjaminwilliams@email.com
 Modules
-117, Back-End Web Development, Brendan Munnelly, SEM5 & SEM6
-121, Mobile Apps 2, Saravanabalagi Ramachandran, SEM5
+107, Math for IT 1, Mit Patel, SEM2
+101, Computational Thinking and Problem Solving, Annet Foster, SEM1
+112, Front-End Web Development, Brendan Munnelly, SEM3 & SEM4
+122, Statistics & Data, Mit Patel, SEM5
+109, Mathematics for IT 2, Mit Patel, SEM3
+102, Interpersonal Skills for IT, Elaine Treacy, SEM1
+115, Mobile App 1, Saravanabalagi Ramachandran, SEM4
+120, Cyber Security Defence & Operations, David Keane, SEM6
 110, Operating Systems & Administration, Pramit Dutta, SEM3 & SEM4
+114, Network Routing and Switching, David Keane, SEM3
+119, Software Engineering, Wei Ren, SEM5 & SEM6
 113, Data Storage & Database Management, Wenhao Fu, SEM3 & SEM4
 104, Programming Essentials, Wenhao Fu, SEM1 & SEM2
-101, Computational Thinking and Problem Solving, Annet Foster, SEM1
-108, Software Defined Computing, David Keane, SEM2
-105, Management Information Systems, Rizwan Ahmed, SEM1 & SEM2
-114, Network Routing and Switching, David Keane, SEM3
-109, Mathematics for IT 2, Mit Patel, SEM3
-122, Statistics & Data, Mit Patel, SEM5
-112, Front-End Web Development, Brendan Munnelly, SEM3 & SEM4
-120, Cyber Security Defence & Operations, David Keane, SEM6
-100, Computer Fundamentals, David Keane, SEM1
-107, Math for IT 1, Mit Patel, SEM2
-116, DevOps, Wenhao Fu, SEM4
-123, Research Project/Third Year Project, , SEM5 & SEM6
-115, Mobile App 1, Saravanabalagi Ramachandran, SEM4
+117, Back-End Web Development, Brendan Munnelly, SEM5 & SEM6
 103, UX/UI Design & Usability, Seamus Hickey, SEM1 & SEM2
-119, Software Engineering, Wei Ren, SEM5 & SEM6
+123, Research Project/Third Year Project, , SEM5 & SEM6
+105, Management Information Systems, Rizwan Ahmed, SEM1 & SEM2
+121, Mobile Apps 2, Saravanabalagi Ramachandran, SEM5
 118, Game Design, Seamus Hickey, SEM5 & SEM6
-102, Interpersonal Skills for IT, Elaine Treacy, SEM1
-106, Networking Technologies, David Keane, SEM2
+108, Software Defined Computing, David Keane, SEM2
+116, DevOps, Wenhao Fu, SEM4
 111, Object-Oriented Programming, Wei Ren, SEM3 & SEM4
+100, Computer Fundamentals, David Keane, SEM1
+106, Networking Technologies, David Keane, SEM2
 Grades
-25793, 119, 60.4
-25797, 121, 22.0
-25797, 120, 86.4
-25795, 109, 10.0
-25791, 116, 82.6
-25789, 115, 30.1
-25794, 111, 83.9
-25795, 108, 78.3
+25798, 107, 33.4
 25793, 106, 70.3
 25790, 102, 45.2
-25794, 117, 65.5
-25798, 107, 33.4
-25796, 118, 85.6
+25789, 115, 30.1
 25790, 110, 76.9
-25796, 113, 97.5
+25797, 121, 22.0
+25794, 117, 65.5
+25797, 120, 86.4
+25789, 101, 99.2
+25791, 116, 82.6
 25798, 122, 72.1
+25791, 104, 88.2
 25792, 103, 55.8
 25792, 123, 73.8
-25791, 104, 88.2
-25789, 101, 99.2
+25795, 109, 10.0
+25794, 111, 83.9
+25793, 119, 60.4
+25796, 113, 97.5
+25795, 108, 78.3
+25796, 118, 85.6
 Enrollments
-25793, 117
-25793, 112
-25789, 123
-25789, 108
-25795, 118
-25795, 102
-25796, 113
-25796, 115
-25797, 110
-25797, 122
-25790, 116
-25790, 115
-25790, 114
-25790, 109
-25790, 106
-25791, 120
-25791, 103
-25792, 104
-25792, 119
-25798, 107
-25798, 111
 25794, 121
 25794, 116
+25795, 102
+25795, 118
+25797, 122
+25797, 110
+25790, 109
+25790, 116
+25790, 115
+25790, 106
+25790, 114
+25793, 117
+25793, 112
+25792, 119
+25792, 104
+25798, 107
+25798, 111
+25791, 103
+25791, 120
+25789, 123
+25789, 108
+25796, 113
+25796, 115

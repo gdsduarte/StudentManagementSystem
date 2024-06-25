@@ -1,3 +1,13 @@
+/* 
+ * Student Management System App
+ * Name: Guilherme Duarte da Silva
+ * ID: 25662
+ * 
+ * Description: This is the main class of the application. It calls the GUI class.
+ *              It is also responsible for the execution of the application.
+ * 
+*/
+
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.*;
@@ -10,10 +20,7 @@ import java.util.stream.Collectors;
 
 public class StudentManagementSystemGUI {
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(StudentManagementSystemGUI::new);
-    }
-
+    // Create GUI components
     private final StudentManagementSystem sms;
     private final JFrame frame;
     private final JTable dataDisplayDashboard;
@@ -44,7 +51,7 @@ public class StudentManagementSystemGUI {
         setupGUI();
 
         // Load data from file when the program starts up
-        sms.loadFromFile("Java/StudentManagementSystem_CA3/database.csv");
+        sms.loadFromFile("database.csv");
         updateDataDisplays();
     }
 
@@ -123,6 +130,7 @@ public class StudentManagementSystemGUI {
         JFrame mainFrame = new JFrame("Student Management System");
         mainFrame.setSize(900, 500);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setLocationRelativeTo(null);
         mainFrame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -130,7 +138,7 @@ public class StudentManagementSystemGUI {
                 int result = JOptionPane.showConfirmDialog(mainFrame, "Do you want to save data before exiting?",
                         "Save data?", JOptionPane.YES_NO_CANCEL_OPTION);
                 if (result == JOptionPane.YES_OPTION) {
-                    sms.saveToFile("Java/StudentManagementSystem_CA3/database.csv");
+                    sms.saveToFile("database.csv");
                     JOptionPane.showMessageDialog(mainFrame, "Data saved successfully.");
                     System.exit(0);
                 } else if (result == JOptionPane.NO_OPTION) {
@@ -140,7 +148,7 @@ public class StudentManagementSystemGUI {
                 }
             }
         });
-        mainFrame.setLocationRelativeTo(null);
+
         return mainFrame;
     }
 
@@ -421,17 +429,7 @@ public class StudentManagementSystemGUI {
         return panel;
     }
 
-    private String[] getCurrentSemesterIdentifier(JRadioButton firstYearButton, JRadioButton secondYearButton,
-            JRadioButton thirdYearButton) {
-        if (firstYearButton.isSelected()) {
-            return new String[] { "SEM1", "SEM2" };
-        } else if (secondYearButton.isSelected()) {
-            return new String[] { "SEM3", "SEM4" };
-        } else {
-            return new String[] { "SEM5", "SEM6" };
-        }
-    }
-
+    // Create modules table for a semester
     private JTable createModuleTable(List<Module> modules, Student student) {
         String[] columnNames = { "Module ID", "Module Name", "Enrolled" };
         Object[][] data = new Object[modules.size()][3];
@@ -452,6 +450,17 @@ public class StudentManagementSystemGUI {
         return table;
     }
 
+    private String[] getCurrentSemesterIdentifier(JRadioButton firstYearButton, JRadioButton secondYearButton,
+            JRadioButton thirdYearButton) {
+        if (firstYearButton.isSelected()) {
+            return new String[] { "SEM1", "SEM2" };
+        } else if (secondYearButton.isSelected()) {
+            return new String[] { "SEM3", "SEM4" };
+        } else {
+            return new String[] { "SEM5", "SEM6" };
+        }
+    }
+    
     private List<Module> getSemesterModules(String semesterIdentifier) {
         return sms.getModules().stream()
                 .filter(module -> module.getSemester().toUpperCase().contains(semesterIdentifier.toUpperCase()))
@@ -466,7 +475,6 @@ public class StudentManagementSystemGUI {
         sem1ScrollPane.setViewportView(createModuleTable(sem1Modules, currentStudent));
         sem2ScrollPane.setViewportView(createModuleTable(sem2Modules, currentStudent));
     }
-
     class DisabledCheckboxCellEditor extends DefaultCellEditor {
         private JCheckBox checkBox;
     
@@ -486,8 +494,7 @@ public class StudentManagementSystemGUI {
             }
             return c;
         }
-    }
-    
+    } 
     class DisabledCheckboxCellRenderer extends JCheckBox implements TableCellRenderer {
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus,
@@ -505,7 +512,6 @@ public class StudentManagementSystemGUI {
         }
     }
     
-
     // Create Button for GUI actions
     private JButton createButton(String buttonText, Runnable action) {
         JButton button = new JButton(buttonText);
@@ -878,12 +884,12 @@ public class StudentManagementSystemGUI {
 
     // Save to file
     private void saveToFile() {
-        String fileName = "Java/StudentManagementSystem_CA3/database.csv";
+        String fileName = "database.csv";
         sms.saveToFile(fileName);
         JOptionPane.showMessageDialog(frame, "Data saved successfully.");
     }
 
-    // Ennroll/unenroll student in module
+    // Ennroll/Unenroll/Update student in module
     private void enrollStudent(String studentId, String moduleId) {
         Optional<Student> student = sms.getStudentById(studentId);
         Optional<Module> module = sms.getModuleById(moduleId);

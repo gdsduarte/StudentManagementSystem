@@ -1,10 +1,22 @@
-import java.awt.*;
+/* 
+ * Student Management System App
+ * Name: Guilherme Duarte da Silva
+ * ID: 25662
+ * 
+ * Description: This class contains the classes Student and Module, which are used
+ *              to create the objects that will be used in the application. It also contains
+ *              the class StudentManagementSystemGUI, which is responsible for the GUI of the
+ *              application. It also contains the class StudentManagementSystemApp, which is
+ *              responsible for the execution of the application.
+ *
+*/
+
 import java.io.*;
+import java.awt.*;
 import java.util.*;
+import javax.swing.*;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 
 // Color the table rows based on the status of the module
@@ -31,10 +43,10 @@ class GradeColorRenderer extends DefaultTableCellRenderer {
                     case "Pass":
                         cellComponent.setBackground(new Color(204, 255, 204)); // Light green
                         break;
-                    case "To Repeat":
+                    case "Fail":
                         cellComponent.setBackground(new Color(255, 255, 153)); // Light yellow
                         break;
-                    case "Fail":
+                    case "To Repeat":
                         cellComponent.setBackground(new Color(255, 204, 204)); // Light red
                         break;
                     case "Completed":
